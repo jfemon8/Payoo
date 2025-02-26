@@ -21,10 +21,10 @@
                 <div class="card-body">
                   <fieldset class="fieldset">
                     <label class="fieldset-label font-bold">Mobile Number</label>
-                    <input type="email" class="input bg-[#F4F5F7] px-10" placeholder="Enter your number" />
+                    <input type="number" id="mobile" class="input bg-[#F4F5F7] px-10" placeholder="Enter your number" required/>
                     <label class="fieldset-label font-bold">4 Digit Pin</label>
-                    <input type="number" class="input bg-[#F4F5F7] px-10" placeholder="Enter 4 Digit Pin" />
-                    <button class="btn btn-info bg-[#0874F2] mt-4 text-white font-bold">Login</button>
+                    <input type="number" id="pin" class="input bg-[#F4F5F7] px-10" placeholder="Enter 4 Digit Pin" required/>
+                    <button id="login-btn" class="btn btn-info bg-[#0874F2] mt-4 text-white font-bold">Login</button>
                   </fieldset>
                 </div>
               </div>
@@ -33,6 +33,7 @@
 
     </section>
 
+    <script src="js/index.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
