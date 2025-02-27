@@ -7,13 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-gray-200">
-    <section class="bg-white py-6 max-w-md min-h-screen mx-auto">
+<body class="bg-slate-700">
+    <section class="bg-white pt-6 max-w-md min-h-screen mx-auto">
         <nav class="flex justify-between items-center px-6">
             <div class="flex items-center gap-2">
                 <img src="assets/Group.png" class="w-14" alt="Logo">
                 <div>
-                    <h1 class="text-lg font-extrabold">$ <span>45000</span></h1>
+                    <h1 class="text-lg font-extrabold">$ <span id="balance">45000</span></h1>
                     <p class="text-sm">Available Balance</p>
                 </div>
             </div>
@@ -30,7 +30,7 @@
             <p class="text-gray-500 mb-6">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
             <div class="grid grid-cols-3 gap-2">
 
-                <div class="card bg-base-100 border-1 border-gray-400 shadow-md text-center items-center pt-6 cursor-pointer">
+                <div id="add-money-card" class="card bg-base-100 border-1 border-gray-400 shadow-md text-center items-center pt-6 cursor-pointer">
                       <img
                         src="assets/wallet1.png"
                         alt="Wallet"
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 
-                <div class="card bg-base-100 border-1 border-gray-400 shadow-md text-center items-center pt-6 cursor-pointer">
+                <div id="cash-out-card" class="card bg-base-100 border-1 border-gray-400 shadow-md text-center items-center pt-6 cursor-pointer">
                       <img
                         src="assets/send1.png"
                         alt="Wallet"
@@ -93,10 +93,54 @@
             </div>
         </div>
 
-        <div>
-            
+        <div id="add-money" class="bg-gray-200 p-6">
+            <h1 class="font-semibold text-lg mb-4">Add Money</h1>
+
+            <form class="w-full bg-white border border-base-300 p-4 rounded-box">
+
+                <label class="fieldset-label">Select A Bank</label>
+                <select class="select bg-gray-100">
+                    <option disabled selected>Select Bank</option>
+                    <option>bKash</option>
+                    <option>Rocket</option>
+                    <option>Nagad</option>
+                    <option>UPay</option>
+                </select>
+                
+                <label class="fieldset-label">Bank Account Number</label>
+                <input id="add-money-from" type="number" class="input bg-gray-100" placeholder="Enter 11 digit account number" />
+                
+                <label class="fieldset-label">Amount to Add</label>
+                <input id="add-amount" type="number" class="input bg-gray-100" placeholder="Enter Amount to deposit" />
+                
+                <label class="fieldset-label">Pin Number</label>
+                <input id="add-pin" type="number" class="input bg-gray-100" placeholder="Enter 4 digit pin number" />
+                
+                <button id="add-money-btn" class="btn btn-primary mt-4 text-white">Add Money</button>
+              </form>
+
+        </div>
+
+        <div id="cash-out" class="bg-gray-200 p-6">
+            <h1 class="font-semibold text-lg mb-4">Cash Out</h1>
+
+            <form class="w-full bg-white border border-base-300 p-4 rounded-box">
+                
+                <label class="fieldset-label">Agent Number</label>
+                <input id="withdraw-money-to" type="number" class="input bg-gray-100" placeholder="Enter 11 digit number" />
+                
+                <label class="fieldset-label">Amount</label>
+                <input id="withdraw-amount" type="number" class="input bg-gray-100" placeholder="Enter Amount to withdraw" />
+                
+                <label class="fieldset-label">Pin Number</label>
+                <input id="withdraw-pin" type="number" class="input bg-gray-100" placeholder="Enter 4 digit pin number" />
+                
+                <button id="withdraw-money-btn" class="btn btn-primary mt-4 text-white">Withdraw Money</button>
+              </form>
+
         </div>
     </section>
-    
+    <script src="js/tougle.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
