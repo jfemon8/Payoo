@@ -50,7 +50,7 @@
                     </div>
                 </div>
 
-                <div class="card bg-base-100 border-1 border-gray-400 shadow-md text-center items-center pt-6 cursor-pointer">
+                <div id="transfer-money-card" class="card bg-base-100 border-1 border-gray-400 shadow-md text-center items-center pt-6 cursor-pointer">
                       <img
                         src="assets/money1.png"
                         alt="Wallet"
@@ -60,7 +60,7 @@
                     </div>
                 </div>
 
-                <div class="card bg-base-100 border-1 border-gray-400 shadow-md text-center items-center pt-6 cursor-pointer">
+                <div id="get-bonus-card" class="card bg-base-100 border-1 border-gray-400 shadow-md text-center items-center pt-6 cursor-pointer">
                       <img
                         src="assets/bonus1.png"
                         alt="Wallet"
@@ -70,7 +70,7 @@
                     </div>
                 </div>
 
-                <div class="card bg-base-100 border-1 border-gray-400 shadow-md text-center items-center pt-6 cursor-pointer">
+                <div id="pay-bill-card" class="card bg-base-100 border-1 border-gray-400 shadow-md text-center items-center pt-6 cursor-pointer">
                       <img
                         src="assets/purse1.png"
                         alt="Wallet"
@@ -157,8 +157,66 @@
                     </svg>  
                 </div>
             </div>
-
         </div>
+
+        <div id="transfer-money" class="bg-gray-200 p-6">
+            <h1 class="font-semibold text-lg mb-4">Transfer Money</h1>
+
+            <form class="w-full bg-white border border-base-300 p-4 rounded-box">
+                
+                <label class="fieldset-label">User Account Number</label>
+                <input id="transfer-money-to" type="number" class="input bg-gray-100" placeholder="Enter 11 digit number" />
+                
+                <label class="fieldset-label">Amount</label>
+                <input id="transfer-amount" type="number" class="input bg-gray-100" placeholder="Enter Amount to transfer" />
+                
+                <label class="fieldset-label">Pin Number</label>
+                <input id="transfer-pin" type="number" class="input bg-gray-100" placeholder="Enter 4 digit pin number" />
+                
+                <button id="transfer-money-btn" class="btn btn-primary mt-4 text-white">Send Now</button>
+            </form>
+        </div>
+
+        <div id="pay-bill" class="bg-gray-200 p-6">
+            <h1 class="font-semibold text-lg mb-4">Pay Bill</h1>
+
+            <form class="w-full bg-white border border-base-300 p-4 rounded-box">
+
+                <label class="fieldset-label">Select to Pay</label>
+                <select class="select bg-gray-100">
+                    <option disabled selected>Select Payment</option>
+                    <option>Electricity</option>
+                    <option>Educational</option>
+                    <option>Shopping</option>
+                    <option>Toll</option>
+                </select>
+                
+                <label class="fieldset-label">Biller Account Number</label>
+                <input id="pay-bill-to" type="number" class="input bg-gray-100" placeholder="Enter 11 digit account number" />
+                
+                <label class="fieldset-label">Amount to Pay</label>
+                <input id="pay-bill-amount" type="number" class="input bg-gray-100" placeholder="Enter Amount to Pay" />
+                
+                <label class="fieldset-label">Pin Number</label>
+                <input id="pay-bill-pin" type="number" class="input bg-gray-100" placeholder="Enter 4 digit pin number" />
+                
+                <button id="pay-bill-btn" class="btn btn-primary mt-4 text-white">Pay Now</button>
+            </form>
+        </div>
+
+        <div id="get-bonus" class="bg-gray-200 p-6">
+            <h1 class="font-semibold text-lg mb-4">Get Bonus</h1>
+
+            <form class="w-full bg-white border border-base-300 p-4 rounded-box">
+                
+                <label class="fieldset-label">Enter Bonus Coupon</label>
+                <input id="bonus-coupon" type="text" class="input bg-gray-100" placeholder="Enter your coupon" />
+                
+                <button id="get-bonus-btn" class="btn btn-primary mt-4 text-white">Get Bonus</button>
+            </form>
+        </div>
+
+        
     </section>
     <script src="js/tougle.js"></script>
     <script src="js/main.js"></script>
